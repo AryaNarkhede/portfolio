@@ -23,7 +23,7 @@ body {
     background-color: #1a1a1a;
     color: white;
     display: grid;
-    grid-template-columns: 2fr 5fr;
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: auto auto 1fr;
     gap: 20px;
     height: 100vh;
@@ -378,8 +378,10 @@ sidebar p {
 }
 
 sidebar {
-    height: 500px;
-    width: 225px;
+    height: 90vh;
+    width: 250px;
+    overflow-y: auto;
+
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -420,6 +422,8 @@ sidebar {
 
 
 .icons {
+    height: 267px;
+
     background-color: #ECE5DD;
     border-radius: 16px;
 
@@ -430,7 +434,6 @@ sidebar {
 
     box-sizing: border-box;
     display: grid;
-    height: 100%;
     width: 100%;
     place-items: center;
 }
@@ -455,11 +458,8 @@ sidebar {
     width: 200px;
 }
 
-.sidebar-small {
-    visibility: hidden;
-}
 
-@media (max-width: 953px) {
+@media (max-width: 1203px) {
 
 
 
@@ -482,11 +482,13 @@ sidebar {
         margin: 0 auto;
         position: static;
         width: 70%;
+        height: fit-content;
         margin-bottom: 20px;
         height: auto;
     }
 
     .icons {
+        height: fit-content;
         display: flex;
         flex-direction: row;
         background-color: transparent;
@@ -507,9 +509,6 @@ sidebar {
     .icons i:hover {
         width: 60px;
     }
-
-
-
 
     .main-content {
         width: 100%;
@@ -534,9 +533,10 @@ sidebar {
 
     #so,
     #en {
+
+
         text-align: center;
         font-size: 4.5em;
-
     }
 
 
@@ -549,25 +549,19 @@ sidebar {
 }
 
 
-@media (max-width: 768px) {
-    body {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto auto;
-        gap: 10px;
-    }
+@media (max-width: 443px) {
 
-    sidebar {
-        grid-row: 1;
+    #so,
+    #en {
+        font-size: 3.5em;
     }
+}
 
-    #Heading,
-    #text {
-        grid-column: 1;
-    }
+@media (max-width: 332px) {
 
-    #box1,
-    #box2 {
-        grid-column: 1;
+    #so,
+    #en {
+        font-size: 3em;
     }
 }
 
